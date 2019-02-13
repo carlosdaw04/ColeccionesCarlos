@@ -8,7 +8,8 @@ import java.util.TreeSet;
 
 public class Main {
 	
-	static int [] numeros = {3, 7, 2, 9, 8, 6, 4, 5, 1};
+//	private static int [] numeros = {3, 7, 2, 9, 8, 6, 4, 5, 1};
+	private static int [] numeros = {10, 3, 201, 4, 957, 2, 87, 531, 402, 27, 95};
 	
 	public static void main(String[] arg) {
 		//Colecciones LISTAS
@@ -37,14 +38,14 @@ public class Main {
 		mostrarColeccion(treeSet);
 	}
 	
-	static void mostrarColeccion(Collection c) {
+	static void mostrarColeccion(Collection<Integer> c) {
+		System.out.println(c.getClass().getSimpleName() + ": " + c.size() + " elementos");
 		Iterator<Integer> i = c.iterator();
 		while(i.hasNext()) {
 			Integer numero = i.next();
+			System.out.print(numero);
 			if(i.hasNext()) {
-				System.out.print(numero + ", ");	
-			}else {
-				System.out.print(numero);	
+				System.out.print(", ");	
 			}
 		}
 		System.out.println();

@@ -2,30 +2,27 @@ package Ejercicios;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Random;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Ejercicio1 {
 	public static void main(String[] args) {
-		ArrayList<Integer> lista = new ArrayList<Integer>(100);
+		ArrayList<Integer> lista = new ArrayList<Integer>();
 //		List<Integer> lista = new ArrayList<Integer>();
+		Set<Integer> hash = new HashSet<Integer>(lista);
+		Set<Integer> tree = new TreeSet<Integer>(lista);
 		Random r = new Random();
 		
 		for(int i=0; i<100; i++) {
-			lista.add(r.nextInt(100)+1);
+			lista.add(r.nextInt(1000)+1);
 		}
 		
-//		Collections.sort(lista);
-		
 		mostrarColeccion(lista);
-		
-		Set<Integer> set = new HashSet<Integer>(lista);
-//		Set<Integer> set = new HashSet<Integer>(lista);
-		
-		mostrarColeccion(set);
+		mostrarColeccion(hash);		//No salen ordenados.
+		mostrarColeccion(tree);		//Salen ordenados.
 	}
 	
 	static void mostrarColeccion(Collection<Integer> c) {

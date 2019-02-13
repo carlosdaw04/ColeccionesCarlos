@@ -11,7 +11,7 @@ public class Main {
 		
 		
 		//EJERCICIO 3 (PALABRAS)
-		Palabras p = new Palabras("Lorem ipsum dolor sit amet, consectetur adipiscing elit");
-		System.out.println(p.palabrasNoRepetidas(p.cadena));
+//		Palabras p = new Palabras("Lorem ipsum dolor sit amet, consectetur adipiscing elit");
+//		System.out.println(p.palabrasNoRepetidas(p.cadena));
 	}
 }
